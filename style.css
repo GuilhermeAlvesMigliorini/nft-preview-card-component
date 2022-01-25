@@ -1,0 +1,168 @@
+:root {
+  --bg-color: #0d1a2d;
+  --card-color: #15273f;
+  --text-color: #91a7c5;
+  --highlight-color: #02fefc;
+  --card-shadow-color: #0c1729;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+.card {
+  max-width: 560px;
+  margin: 5vh auto auto auto;
+  background-color: var(--card-color);
+  justify-content: center;
+  border-radius: 1rem;
+  box-shadow: var(--card-shadow-color);
+}
+
+.card .card-img {
+  position: relative;
+  max-width: 510px;
+  height: auto;
+  margin: 25px;
+  border-radius: 1rem;
+  z-index: 2;
+}
+
+.card .img-hover {
+  position: absolute;
+  z-index: 1;
+  height: 508px;
+  width: 508px;
+  margin: 26px;
+  border-radius: 1rem;
+  background-color: var(--highlight-color);
+}
+
+.card .img-hover img {
+  width: 100px;
+  height: auto;
+  display: flex;
+  margin: 230px auto;
+  justify-content: center;
+}
+
+.card .card-img:hover {
+  cursor: pointer;
+  opacity: 50%;
+}
+
+.card h1 {
+  font-size: 1.8rem;
+  color: #fff;
+  display: block;
+  padding-left: 25px;
+}
+
+.card h1:hover {
+  color: var(--highlight-color);
+  cursor: pointer;
+}
+
+.card .description,
+.time-left {
+  color: #91a7c5;
+}
+
+.card .description {
+  font-size: 1.6rem;
+  margin: 25px;
+}
+
+.card .info ul li:first-child {
+  list-style: url(./images/icon-ethereum.svg);
+  color: var(--highlight-color);
+  list-style-position: inside;
+  float: left;
+  margin-left: 2rem;
+}
+
+.card .info ul li:last-child {
+  list-style: url(./images/icon-clock.svg);
+  list-style-position: inside;
+  color: var(--text-color);
+  text-align: right;
+  margin-right: 25px;
+}
+
+.card .info hr {
+  margin: 1.6rem;
+  border-color: var(--text-color);
+  border-radius: 1rem;
+}
+
+.card .creator {
+  display: inline;
+}
+.card .creator p {
+  color: var(--text-color);
+  padding-bottom: 2rem;
+  font-size: 1.3rem;
+  text-align: left;
+  margin-left: 0;
+}
+
+.card .creator span {
+  color: #fff;
+}
+
+.card .creator span:hover {
+  color: var(--highlight-color);
+  cursor: pointer;
+}
+
+.card .creator img {
+  display: inline-block;
+  width: 40px;
+  height: auto;
+  float: left;
+  margin-top: -0.5rem;
+  margin-left: 8rem;
+  border: 1px solid white;
+  border-radius: 50px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--text-color);
+}
+
+footer .attribution a {
+  color: #3e52a3;
+}
+
+@media only screen and (max-width: 650px) {
+  .card {
+    width: 400px;
+  }
+
+  .card .card-img {
+    max-width: 350px;
+  }
+
+  .card .img-hover {
+    max-width: 348px;
+    max-height: 348px;
+  }
+
+  .card .img-hover img {
+    width: 80px;
+    height: auto;
+    margin: 155px auto;
+  }
+
+  .card .creator img {
+    margin-left: 4rem;
+  }
+}
